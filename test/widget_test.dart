@@ -86,6 +86,7 @@ void main() {
       },
     );
 
+    //normal widget test without use of golden matcher
     testWidgets('is right value displayed on increment',
         (WidgetTester tester) async {
       const testWidget = MaterialApp(
