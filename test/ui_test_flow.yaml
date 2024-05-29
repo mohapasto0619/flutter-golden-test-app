@@ -1,0 +1,32 @@
+# ui_test_flow.yaml
+
+appId: orange.com.golden_test_app
+---
+- launchApp
+- assertVisible: "Click count : 0"
+- tapOn:
+    text: "Increment (+1)"
+    repeat: 5
+    delay: 500
+- assertVisible: "Click count : 5"
+- tapOn:
+    text: "Decrement (-1)"
+    repeat: 2
+    delay: 500
+- assertVisible: "Click count : 3"
+- tapOn: "Reset (0)"
+- assertVisible: "Click count : 0"
+- tapOn: "Navigate"
+- assertVisible: "Hello, please enter your informations."
+- tapOn: "Username..."
+- inputRandomEmail
+- tapOn: "Password..."
+- inputText: "Azerty*123"
+- hideKeyboard
+- tapOn: "Validate"
+- assertVisible: "User successfully authenticated !"
+- back
+
+
+
+

@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'click count : $_counter',
+              'Click count : $_counter',
               key: const Key('result_text'),
             ),
             const SizedBox(
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               key: const Key('first_home_button'),
               onPressed: _incrementCounter,
-              child: const Text("Click here"),
+              child: const Text("Increment (+1)"),
             ),
             const SizedBox(
               height: 20,
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               key: const Key('2nd_home_button'),
               onPressed: _decrementCounter,
-              child: const Text("No ! Click heree"),
+              child: const Text("Decrement (-1)"),
             ),
             const SizedBox(
               height: 20,
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               key: const Key('3rd_home_button'),
               onPressed: _resetCounter,
-              child: const Text("here ! here !"),
+              child: const Text("Reset (0)"),
             ),
             const SizedBox(
               height: 20,
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           )),
                 );
               },
-              child: const Text("don't click "),
+              child: const Text("Navigate"),
             )
           ],
         ),

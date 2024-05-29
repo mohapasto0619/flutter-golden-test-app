@@ -66,14 +66,14 @@ void main() {
       (tester) async {
         final builder = DeviceBuilder()
           ..addScenario(
-            name: 'click me Once tap',
+            name: 'Increment (+1) Once tap',
             widget: const MyHomePage(
               title: 'Flutter',
             ),
             onCreate: (scenarioWidgetKey) async {
               final firstButton = find.descendant(
                 of: find.byKey(scenarioWidgetKey),
-                matching: find.bySemanticsLabel('Click here'),
+                matching: find.bySemanticsLabel('Increment (+1)'),
               );
               expect(firstButton, findsOneWidget);
               await tester.tap(firstButton);
@@ -99,7 +99,7 @@ void main() {
       await tester.tap(firstButton);
 
       await tester.pump();
-      final count = find.text('click count : 1');
+      final count = find.text('Click count : 1');
       expect(count, findsOneWidget);
     });
 
@@ -108,7 +108,7 @@ void main() {
       (tester) async {
         final builder = DeviceBuilder()
           ..addScenario(
-            name: 'click me twice tap',
+            name: 'Increment (+1) twice tap',
             widget: const MyHomePage(
               title: 'Flutter',
             ),
@@ -133,7 +133,7 @@ void main() {
       (tester) async {
         final builder = DeviceBuilder()
           ..addScenario(
-            name: 'No ! Click heree Once tap',
+            name: 'Decrement (-1) Once tap',
             widget: const MyHomePage(
               title: 'Flutter',
             ),
@@ -157,7 +157,7 @@ void main() {
       (tester) async {
         final builder = DeviceBuilder()
           ..addScenario(
-            name: 'No ! Click heree twice tap',
+            name: 'Decrement (-1) twice tap',
             widget: const MyHomePage(
               title: 'Flutter',
             ),
@@ -182,7 +182,7 @@ void main() {
       (tester) async {
         final builder = DeviceBuilder()
           ..addScenario(
-            name: 'tap Click here ! twice then here ! here ! Once tap',
+            name: 'tap Increment (+1) ! twice then Reset Once tap',
             widget: const MyHomePage(
               title: 'Flutter',
             ),

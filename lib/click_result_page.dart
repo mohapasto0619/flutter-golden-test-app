@@ -34,6 +34,7 @@ class _ClickResultPageState extends State<ClickResultPage> {
               const TextField(
                 key: Key('first_input'),
                 decoration: InputDecoration(
+                  hintText: 'Username...',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -43,6 +44,7 @@ class _ClickResultPageState extends State<ClickResultPage> {
               const TextField(
                 key: Key('2nd_input'),
                 decoration: InputDecoration(
+                  hintText: 'Password...',
                   border: OutlineInputBorder(),
                 ),
               ),
